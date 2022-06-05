@@ -11,7 +11,9 @@ export const calculateHash = async () => {
     fs.readFile(path.join(subPath, 'fileToCalculateHashFor.txt'), (err, data)=>{
         if (err) throw Error(err);
         hashSum.update(data);
-        return hashSum.digest('hex');
+        const result = hashSum.digest('hex');
+        console.log(result)
+        return result;
     })
 };
 

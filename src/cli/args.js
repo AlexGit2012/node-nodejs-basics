@@ -5,7 +5,7 @@ export const parseArgs = () => {
         parsedString+=`${parsedArgv.shift().slice(2)} is ${parsedArgv.shift()}, `
     }
     if (parsedString) {
-        parsedString.slice(0, parsedString.length - 3);
+        parsedString = parsedString.slice(0, parsedString.length - 2);
     }
     console.log(parsedString);
     return parsedString;
