@@ -7,7 +7,7 @@ export const write = async () => {
     const __dirname = path.dirname(__filename);
     const subPath = path.join(__dirname, 'files');
 
-    const writableStream = fs.createWriteStream(path.join(subPath, 'fileToWrite.txt1'));
+    const writableStream = fs.createWriteStream(path.join(subPath, 'fileToWrite.txt'));
 
     process.stdin.pipe(writableStream);
 };
